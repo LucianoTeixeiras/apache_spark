@@ -7,7 +7,6 @@ sudo mv spark-3.3.1-bin-hadoop3 /opt/spark
 
 # Download Apache Hadoop
 wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
-wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4-src.tar.gz
 
 tar -xzf hadoop-3.3.4.tar.gz
 

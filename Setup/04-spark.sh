@@ -11,3 +11,9 @@ wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
 tar -xzf hadoop-3.3.4.tar.gz
 
 sudo mv hadoop-3.3.4 /opt/hadoop
+
+# Use Docker Compose
+
+curl -LO https://raw.githubusercontent.com/bitnami/containers/main/bitnami/spark/docker-compose.yml
+
+docker-compose up

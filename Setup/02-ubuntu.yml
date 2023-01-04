@@ -88,34 +88,6 @@
           name: terraform
       
     - block:
-      - name: Remove Apache Spark
-        become: true
-        command: rm -rf /opt/spark
-      - name: Install Apache Spark
-        become: true
-        unarchive:
-          src: 'https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz'
-          dest: /opt/
-          remote_src: yes
-      - name: Renaming Apache Spark
-        become: true
-        command: mv /opt/spark-3.3.1-bin-hadoop3 /opt/spark
-
-    - block:
-      - name: Remove Apache Hadoop
-        become: true
-        command: rm -rf /opt/hadoop
-      - name: Install Apache Hadoop
-        become: true
-        unarchive:
-          src: 'https://archive.apache.org/dist/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz'
-          dest: /opt/
-          remote_src: yes
-      - name: Renaming Apache Hadoop
-        become: true
-        command: mv /opt/hadoop-3.3.4 /opt/hadoop
-
-    - block:
       - name: Install Google Cloud SDK Key
         become: true
         apt_key:
@@ -156,7 +128,7 @@
           - containerd.io
           - docker-compose-plugin
       - name: Adding existing user to group Docker
-        become: yes
+        become: true
         user: 
           name: '{{ ansible_user_id }}'
           groups: docker 

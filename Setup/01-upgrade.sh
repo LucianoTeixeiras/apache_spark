@@ -45,7 +45,7 @@ echo -e $TEXT_YELLOW
 echo 'Install Ansible with Pip3 finished...'
 echo -e $TEXT_RESET
 
-ansible-playbook 02-ubuntu.yml --ask-become-pass
+ansible-playbook 02-ubuntu.yml
 echo -e $TEXT_YELLOW
 echo 'Ansible Playbook finished...'
 echo -e $TEXT_RESET
